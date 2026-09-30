@@ -1,0 +1,8 @@
+// Core PHP = https://www.youtube.com/playlist?list=PL3VM-unCzF8ipG50KDjnzhugceoSG3RTC
+// Laravel L1 =  https://www.youtube.com/playlist?list=PL3VM-unCzF8hy47mt9-chowaHNjfkuEVz
+// Laravel multi-auth = https://www.youtube.com/watch?v=LtzPygnIqn4
+// Laravel spatie = https://www.youtube.com/watch?v=zEZ-JBrdYt4
+
+// REGEX PLAYLIST = https://www.youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD
+// PHP REG LOG IN OUT = https://www.youtube.com/playlist?list=PLejKBGxF74J67G7KSGHA4JPOKW9H3cQq3
+// JAVASCRIPT DOM = https://www.youtube.com/playlist?list=PL4cUxeGkcC9gfoKa5la9dsdCNpuey2s-V

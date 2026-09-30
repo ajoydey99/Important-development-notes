@@ -1,0 +1,23 @@
+----for VSCODE----
+1. theme = vesper
+2. font = JetBrains Mono
+3. extentions = caps lock state, auto rename tag, color highlight
+4. extensions = css peek, prettier, image preview, live server
+5. extensions = MySQL, Material Icon Theme, live server preview
+6. for php = php intellisense, php namespace resolver, phpfrmt
+
+
+
+-----for development----
+1. install composer, node
+2. install xampp, laragon, herd
+3. install gitbash
+4. PHP Versions 7.4 , 8.2
+
+
+-----CHROME EXTENTIONS----
+1. fake filler, JSON viewer PRO
+2. live server
+
+-----BOOKMARKS------
+1.Documentation PHP, LARAVEL, NODE

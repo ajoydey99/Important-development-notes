@@ -1,0 +1,150 @@
+1. git is a distributed version control system for tracking changes in source code during software development.
+2. git configuration   => git config --global user.email "adey@gmail.com"
+		       => git config --global user.name "ajoy dey"
+2.5 rename master branch to main branch => git branch -M main
+3. git config  details => git config --list
+4. git lifecycle:: working dir -> staging area -> local repository -> remote repository
+                   git add-> git commit -> git push
+4.5 auto-accept merge message: git pull origin main --no-edit
+
+5.important commands::
+		->initialize repository::    		git init
+		->add files to staging area::		git add file_name
+		->commit to local repo::		git commit -m "first commit"
+		->rename master branch to main::	git branch -M main
+		->connect remote repo::			git remote add origin repository_link
+		->push all changes:: 			git push -u origin main
+6.know which branch => git branch
+7.git history       => git log
+8.show all git commit in one line => git log --oneline 
+9.there are 3 types of files in working directory:: untracked file, unmodified file, modified file
+10. difference between last commit and current version => git diff
+11. copy paste in gitbash terminal:: copy->on select,,,paste->middle mouse button
+
+12. git stash command::
+		-> temporary stash a change::		git stash
+		-> naming stash::			git stash save "name"
+		-> show list of stashes::		git stash list
+		-> to apply last stash::                git stash pop
+		-> to apply specific stash::            git stash apply indexNo./stashName
+		-> to delete a specific stash::		git stash drop indexNo./stashName
+
+		-> to clear all stash::			git stash clear
+13. git restore command::
+		->discard unstaged changes::		git restore <filename>
+		->discard staged changes::		git restore --staged <filename>
+		->restore entire working dir::		git restore .
+		->restore both working dir and
+		  staging area				git restore --staged --worktree <filename>
+
+14. git branch concept::
+		->create a new branch			git branch <branchname>
+		->list all branches			git branch
+		->switch branches 			git checkout <branchname>
+		->create and switch branch		git checkout -b <branchname>
+		->merge branch to main			git merge <branchname>		 git push origin main
+		->delete a branch locally(after merge)	git branch -d <branchname>	 git push origin main
+		->delete a branch locally(before merge) git branch -D <branchname>
+		->delete a branch from repo		git push origin --delete <branchname>
+		->info about local branches		git branch -v
+		->info about remote branches		git branch -r
+		->info about merged branches		git branch --merged
+		->info about not merged branches	git branch --no-merged
+		
+15. git pull and merge::
+		->update and commit main branch		git commit -a -m "update everything"  git push 
+		->create a new branch			git branch <branchname>
+		->switch to new branch			git checkout <branchname>
+		->update and commit new branch 		git commit -a -m "update branch work"   git push orgin <branchname>
+		->pull all changes from main		git pull origin main
+		  branch to new branch		
+		->now switch to main branch		git checkout main
+		->now merge new branch to main		git merge <branchname>
+		
+16. git reset command::
+		->undo last commit and 
+		  removes all changes			git reset --hard HEAD~1
+		->undo last commit and
+		  keep changes unstaged			git reset --mixed HEAD~1 or git reset HEAD~1
+		->undo last commit and
+		  keep chandes staged to recommit	git reset --soft HEAD~1	
+
+17. combining multiple sequeantial commit into single commit
+		->Start the interactive rebase::	git rebase -i HEAD~<number_of_commits>
+		->In the editor, change pick to squash (or s) for all commits you want to merge into the one above it. 
+		  The very first commit in the list should remain as pick; this will be the final, combined commit.
+		->save and close:: press Esc, then type :x and press Enter
+
+18. combining an entire feature branch into a single commit when merging it into a main branch.
+		->Switch to your target branch:: 	git checkout main
+		->Run the squash merge command::	git merge --squash <feature-branch-name>
+		->Commit the changes::			git commit -m "A single, descriptive commit message for the feature"
+
+
+19. DIFFERENT MERGE PROCESS
+--------------------------------------
+1--only branch commit
+----------------------------------------
+# note down last commit no. and message
+# update main
+git checkout main
+git pull origin main
+
+# create feature branch
+git checkout -b feature/customer-search
+
+# work
+git add .
+git commit -m "Add customer search feature"
+git push origin feature/customer-search
+
+# sync with latest main (IMPORTANT)
+git checkout feature/customer-search
+git pull origin main
+
+# merge
+git checkout main
+git pull origin main
+git merge feature/customer-search
+git push origin main
+
+# cleanup
+git branch -d feature/customer-search
+git push origin --delete feature/customer-search
+--------------------------------------------------
+2. main and feature both parallel commit
+---------------------------------------------------
+# note down last commit no. and message
+
+git checkout main
+git pull origin main
+
+# feature commit
+git checkout -b feature
+git add .
+git commit -m "feature work"
+git push origin feature 
+
+# main commit
+git checkout main
+git add . 
+git commit -m "main work"
+git push origin main
+
+# merge main to feature
+git checkout feature
+git merge main
+
+# resolve conflict
+git add .
+git commit -m "resolve conflicts"
+git push origin feature
+
+# merge feature into main
+git checkout main
+git pull origin main
+git merge feature
+
+# delete branch and push 
+git branch -d feature
+git push origin --delete feature

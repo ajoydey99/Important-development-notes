@@ -1,0 +1,188 @@
+commands (case sensitive)
+---------------------
+** date
+** ncal = new calendar
+** cal = original calendar
+** echo your_line = prints your_line
+** ncal 2021 or ncal april 1921 [ncal month year]
+** sort file.txt = sort file content
+** rm file.txt = deletes file
+** ncal -3h = ncal -3 -h
+** date -u = date --universal (long form option takes double dash -- )
+** sort file.txt -r
+** echo -e "banana\napple\norange" | sort -ru
+** ncal -A 2 = prints 2 month after including current month
+** ncal -A1 -B1 = ncal -3
+** man = means manual (eg: man ncal)
+** man -k word = we can search for a term within the manual
+** man 5 passwd = manual of password file in section 5
+** whoami = prints userid
+** who = print current logged in user details
+** / means -root, ~ means -home
+** ls -l = listing long format of each directory
+** ls -a = list any hidden files that begin with dot(.)
+** cd = change directory
+** one dot (.) = current directory
+** two dot (..) = previous directory
+** mkdir test = make new directory
+** touch newfile.txt = make new text file
+** pwd = print working directory
+** pwd [-LP] = print the names of the current working directory
+** xdg-open / = opens root directory
+** xdg-open ~ = opens home directory
+** cat newfile.txt = read text file
+** cat >> newfile.txt and ctrl + d = write to the file and end writing
+** cat file2.txt >> file1.txt = add content of file2 to file1
+** mv file.txt folder = move file to a folder
+** cp file.txt copy.txt = copy a file
+** rm copy.txt = removes a file
+** rm -d folder/rmdir -d folder = only deletes folder
+** rm -r folder = deletes folder and all its contents
+** rm *.txt = deletes all txt files
+** find . -name ab.txt = search file in current directory
+** find . -iname AB.txt = search files ignoring cases
+** find -type d -name folder = search directory
+** passwd = change or update password
+** apt = advance packaging tool 
+** sudo = superuser do/substitute user do it allows an authorized user to temporarily execute a single command 
+          with administrative or root privileges.
+** history = Displays your full command history list with line numbers.
+** history 10 = Shows only the last 10 commands executed.
+** !! = Reruns the exact last command you typed.
+** sudo !! = Runs the previous command with sudo privileges
+** !45 = Executes the command at line number 45 in your history list.
+
+Cron Jobs
+------------------------
+** crontab -e = edits or creates your personal cron job file
+** crontab -l = lists all active cron jobs for your user profile
+** crontab -r = removes your entire crontab file from the system
+
+Permissions
+------------------------
+** Permissions are split into three User Classes: 1. u (User/Owner)
+                                                  2. g (group)
+                                                  3. o (others)
+                                                  4. a (all)
+** There are three basic permission types: r (read), w (write), x(execute)
+** Numeric mode uses a three-digit octal number to explicitly set permissions: Read(r) = 4
+									       Write(w) = 2
+                                                                               Execute(x) = 1
+                                                         		       No permission (-) = 0
+** Symbolic mode uses characters to add(+), remove(-) or explicitly match(=) permissions without altering the remaing flags
+** rwx = read write execute (4+2+1 = 7)
+** r-x = read ----- execute (4+0+1 = 5)
+** r-- = read ----- ------- (4+0+0 = 4)
+** drwxr-xr-x indicates a directory in Linux/Unix systems with 755 permissions
+             -> rwx for [owner]
+	     -> r-x for [group}
+             -> r-x for [others/world]
+** chmod [options/flags] [mode/permissions] [file_name}
+** chmod -R 755 /path/to/directory = -R(recursive): changes permissions for a directory and all of its 
+                                      underlying files and subdirectories simultaneously
+** chmod -v 644 notes.txt = -v(verbose): outputs a diagnostic message for every processed file to easily
+                            confirm the modifications
+** chmod +x script.sh = Grants execute permissions to all user levels.
+** chmod u+x script.sh = Grants execute permission specifically to the owner only.
+** chmod g-w documennt = Revokes write permission from the group.
+** chmod ug=rw,o=r file.txt = Sets User and Group to read/write and others to read-only
+
+Nano text editor
+-------------------------
+** nano test.txt = create and open text file 
+** File Operations=> ctrl + O = Save (Write Out) the current changes without exiting.
+		     ctrl + X = Exit the editor. Nano will ask to save if you have unsaved changes.
+ 		     ctrl + R = Insert / Read another file's text into your current buffer.
+** Editing & Clipboard=> ctrl + K = Cut the entire current line of text into the buffer.
+			 ctrl + U = Paste (Uncut) the text previously placed in the buffer.
+			 alt + 6 = Copy the current line.
+			 alt + A  : Set a marker to select blocks of text using arrow keys.
+		 	 alt + U  : Undo the last action.
+			 alt + E  : Redo the last undone action.
+** ctrl + S = save file 
+** ctrl + G = display help text
+** ctrl + ^ = select text/unselect
+
+Vim text editor
+-------------------------
+** vi test.txt = create and open text file
+** i = (insert mode) modify the file
+** esc = escape to command mode from insert mode
+** Saving and Quitting(Command-Line Mode)=> :w = save (write) the file.
+                                            :wq = save and quit.
+                                            :q! = quit without saving changes.
+                                            :x = save and quit (faster eqivalent to :wq)
+                                            :r filename.txt = read and append file to the current buffer
+                                            :w filename.txt = create new file and save content
+                                            :! linux_commands = use commands inside vim
+ 					    :e newfile.txt = open new buffer
+                                            :enew = open new empty buffer
+                                            :bp/bn = switch to buffer-previous/buffer-next
+** Entering insert mode=> i = Insert text before the cursor.
+                          a = Append text after the cursor.
+                          A = Append text at the very end of the line.
+                          o = Open a new line below the cursor.
+                          O = Open a new line above the cursor.
+                          v = entering visual mode
+** Editing, Copying, Pasting=> x = Delete character under the cursor
+                               dw = Delete from cursor to end of word
+                               dd = Delete (cut) the entire current line
+                               yy = Copy (yank) the current line.
+                               p = Paste copied/cut text after the cursor
+                               u = Undo last action
+                               ctrl + r = Redo last undone action
+** Cursor Movement (Normal Mode) => h = move left, j = move down, k = move up, l = move right
+                                    w = Jumnp forward to start of next word.
+                                    b = Jump backward to start of previous word.
+                                    0 = Move to the beginning of current line 
+                                    $ = Move to the end of current line
+                                    gg = Go to the first line of the file
+                                    G = Go to the last line of the file
+                                    :<number> = Jump directly to a specific line number
+Instructions
+---------------------
+** steps for navigating manual -> first type any man command, then hit h 
+** anything written inside [] is optional
+** [option]... means we can pass more than one option (eg: echo [string]... =  echo hello world)
+** manual is broken into 8 different sections -
+	 imp: 1. user commands, 
+	      5. File formats and conventions
+	      8.system admin commands(usaually only for root)
+** type command tells us the type of the command, there are 4 types
+	  1. /bin, /bin/usr, /usr/local/bin (executable program, bin means binary) [eg: type clear]
+	  2. built-in shell command [eg: type cd]
+	  3. a shell function
+          4. an alias [eg: type cow]
+** which command = to find the exact location of an executable [eg: which clear]
+** help command is like manual for built-in shell command [eg: help cd]
+
+
+options (case sensitive)
+---------------------
+** -h = highlight off (ncal -h)
+** -j = julian days calendar
+** -M = Set monday as first day (ncal -M)
+** -r = reverse
+** -r = recursive (context of rm command)
+** -u = universal/unique
+** -e = enables interpretation of backslash escapes like \n (newline)
+** -A = After
+** -B = Before
+** -i = interactive prompt (rm -i file.txt)
+** -d = directory
+** -a = append
+
+one-liner
+------------------------
+1. update software = sudo apt update
+2. upgrade packages = sudo apt upgrade
+3. install packages = sudo apt install
+
+full-form
+------------------------------
+** sudo = super user do
+** apt = advance package tool
+** chmod = change mode
+** grep = global regular expression print
+** ping = packet internet groper
+

@@ -1,0 +1,66 @@
+**PROJECT SETUP
+------------------------------------------
+1. composer create-project laravel/laravel my-project
+2. set DB_DATABASE in .env file
+
+**PROJECT FOLDER STRUCTURES
+3. controller = app/http/controllers
+4. models = app/http/models
+5. migrations = database
+6. seeders/factory = database
+7. index file = public
+8. all public assets file = public
+9. css/js = resources
+10. blade files = resources/views
+11. routes files = routes/web.php
+12. all private assets = storage
+13. all packages install = vendor folder
+14. code editor config = vendor/.editorconfig
+15. composer dependency register = composer.json
+16. npm packages = package.json
+
+
+**IMPORTANT ARTISAN COMMAND
+----------------------------------------
+1. All artisan command info = php artisan
+2. php artisan make:view/model/controller/factory filename
+3. populate with fake data = php artisan tinker || App\Models\User::factory(10)->create()
+4. call controller without calling function in route = php artisan make:controller SingleActionController --invokable
+5. resource controller = make:controller VlogController -r
+6. migration convention = make:migration create_vlogs_table
+7. migrate specific path= php artisan migrate --path=database/migrations/your_migration_file_name.php
+8. link between public storage folders = php artisan storage:link
+9. make factory for a model with different factory name = php artisan make:factory FactoryName --model=ModelName
+10 seeding data = php artisan db:seed
+11.php artisan migrate:rollback && php artisan migrate
+12. database seeding by class name: php artisan db:seed --class=ClassName
+13. database seeding during migration: php artisan migrate:fresh --seed
+14. make resource controller with model: php artisan make:contorller ModelController --model='Model'
+
+** Steps after Git Pull laravel project
+--------------------------------------------
+1. Install PHP Dependencies => composer install, composer update
+2. Set Up the Environment File => Copy the example environment file to create your own local .env file
+3. Generate an Application Key => php artisan key:generate
+4. Run Database Migrations => php artisan migrate
+5. Install and Build Frontend Assets => npm install, npm run dev # or for a production build: npm run build
+6. Link Storage (Optional) => php artisan storage:link
+7.
+
+--------------------------
+
+*** Issue if package not install on windows
+0. disable antivirus
+1. run gitbash as administrator
+2. rm -rf vendor
+3. rm composer.lock
+4. composer install
+5. composer require package name
+6. npm install
+
+
+--------------------------------
+
+*** Important notes
+1.Use all() when you want to retrieve every single record from a database table without any filters or sorting.
+  Use get() when you need to filter, sort, or limit the results using query builder methods like where(), orderBy(), or select().

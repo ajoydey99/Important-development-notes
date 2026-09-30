@@ -1,0 +1,36 @@
+Functions
+----------------------------------------
+1.spl_autoload_register()
+2.parse_url()
+3.http_response_code()
+4.extract()
+5.compact()
+6.session_get_cookie_params()
+7.password_hash()
+8.password_verify()
+9.session_regenerate_id()
+10.unset()
+11.$_SERVER['HTTP_REFERER']
+12.$_SERVER['REQUEST_URI']
+13.$_SERVER['REQUEST_METHOD']
+14.__DIR__, __FILE__
+15.DIRECTORY_SEPARATOR
+16.session_start
+17.session_destroy
+18.call_user_func()
+19.array_values()
+20.array_key_exists()
+21.array_filter()
+22.array_key_last()
+23.http_build_query()
+
+
+/////////////////////////////////
+
+SUPER GLOBALS
+----------------------------------
+
+1.$_SERVER
+2.$_GET
+3.$_POST
+4.$_SESSION

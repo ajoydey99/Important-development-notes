@@ -1,0 +1,90 @@
+***Maximize and minimize windows
+---------------------------------
+windows + down key :: To minimize the currently active window
+windows + up key   :: to maximize
+windows + D        :: To minimize and maximize all open windows at once: 
+
+***To change the tab:
+---------------------
+for windows  	  :: alt + tab
+for browser  	  :: ctrl + tab
+Open a new tab    :: Ctrl + T
+Close current tab :: Ctrl + W
+Close all tabs    :: Ctrl + Shift + W
+
+***DevTools shortcut
+----------------------
+Inspect Mode :: ctrl + shift + C
+Console Mode :: ctrl + shift + J
+
+
+***Browser shortcut
+--------------------
+ctrl + F5 :: Hard reset on browser
+ctrl + r  :: for refresh
+F11       :: Full Screen
+
+***Move window with keyboard
+---------------------------
+first alt + space
+then Press M key
+then move with arrow keys
+
+***VSCode shortcuts
+----------------------
+delete a line	      :: ctrl + shift + k
+to move line up down  :: alt + arrow up/down
+copy line up down     :: shift + alt + arrow up/down
+terminal open/close   :: ctrl + backtick(`)
+emoji shortcut        :: win + ;/.
+explorer open/close   :: ctrl + B
+open command pallete  :: ctrl + shift + P
+Quokka start	      :: ctrl + K then Q
+close a single tab    :: ctrl + W
+close all tabs	      :: ctrl + K then W
+search a file         :: ctrl + P
+jump to a line num    :: ctrl + G, then enter line num
+create new file       :: double click on tab  
+clear terminal        :: ctrl + L
+
+
+***Select shortcut
+Ctrl + A                 :: Selects all text or items in the current window or document.
+Shift + Right/Left Arrow :: Selects text one character at a time.
+Shift + Down/Up Arrow    :: Selects one line at a time.
+Shift + Home             :: Selects from the cursor to the beginning of the current line.
+Shift + End  		 :: Selects from the cursor to the end of the current line.
+Ctrl + Shift + Home      :: Selects from the cursor to the beginning of the document.
+Ctrl + Shift + End       :: Selects from the cursor to the end of the document.
+Ctrl + Shift + Right/Left Arrow :: Selects one word at a time.
+Ctrl + Shift + Down/Up Arrow    :: Selects a paragraph (or lines) at a time.
+
+***Cursor movement
+--------------------
+Home key    :: to go to the start of a line
+End key     :: to go to the end
+ctrl + Home :: to go to the very top of a document
+ctrl + End  :: to go to the very bottom
+ctrl + left/right arrow :: to move the cursor by a whole word.
+
+***Deleting text
+--------------------
+Backspace        :: Delete characters to the left
+Delete		 :: Delete characters to the right
+Ctrl + Del       :: Delete words to the right
+Ctrl + Backspace :: Delete words to the left
+
+***Windows extra
+--------------------
+Lock screen	 :: win + L;
+Sleep mode	 :: win + x, then U, then S
+Shut down 	 :: win + x, then U, then U
+Taskbar icon     :: win + icon-number
+whole screenshot :: win + printScr
+specific scrshot :: win + shift + S
+open setting	 :: win + I
+
+***Ubuntu shortcut
+--------------------
+open terminal           :: ctrl + alt + T
+copy/paste (terminal)   :: ctrl + shift + C / ctrl + shift + V
